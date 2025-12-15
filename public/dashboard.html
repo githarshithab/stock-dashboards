@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Stock Dashboard</h2>
+<div class="stocks-selection">
+  <ul class="stock-list">
+    <li class="stock-item" id="GOOG">
+      <img src="images/goog.png" alt="GOOG Logo" class="stock-logo">
+      <span class="stock-name">GOOG</span>
+      <span class="stock-price" id="GOOG-price">Loading...</span>
+      <button onclick="subscribe('GOOG')">Subscribe</button>
+    </li>
+
+    <li class="stock-item" id="TSLA">
+      <img src="images/tsla.png" alt="TSLA Logo" class="stock-logo">
+      <span class="stock-name">TSLA</span>
+      <span class="stock-price" id="TSLA-price">Loading...</span>
+      <button onclick="subscribe('TSLA')">Subscribe</button>
+    </li>
+
+    <li class="stock-item" id="AMZN">
+      <img src="images/amzn.png" alt="AMZN Logo" class="stock-logo">
+      <span class="stock-name">AMZN</span>
+      <span class="stock-price" id="AMZN-price">Loading...</span>
+      <button onclick="subscribe('AMZN')">Subscribe</button>
+    </li>
+
+    <li class="stock-item" id="META">
+      <img src="images/meta.png" alt="META Logo" class="stock-logo">
+      <span class="stock-name">META</span>
+      <span class="stock-price" id="META-price">Loading...</span>
+      <button onclick="subscribe('META')">Subscribe</button>
+    </li>
+
+    <li class="stock-item" id="NVDA">
+      <img src="images/nvda.png" alt="NVDA Logo" class="stock-logo">
+      <span class="stock-name">NVDA</span>
+      <span class="stock-price" id="NVDA-price">Loading...</span>
+      <button onclick="subscribe('NVDA')">Subscribe</button>
+    </li>
+  </ul>
+</div>
+
+  <div>
+    <h3>Subscribe to Stocks</h3>
+    <select id="stockSelect">
+      <option>GOOG</option>
+      <option>TSLA</option>
+      <option>AMZN</option>
+      <option>META</option>
+      <option>NVDA</option>
+    </select>
+    <button onclick="subscribe()">Subscribe</button>
+  </div>
+
+  <h3>Subscribed Stocks</h3>
+  <ul id="stockList"></ul>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

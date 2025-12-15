@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Broker Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <!-- Logo -->
+<img src="images/goog.png" alt="GOOG Logo" class="stock-logo">
+<img src="images/amzn.png" alt="AMZN Logo" class="stock-logo">
+<img src="images/meta.png" alt="META Logo" class="stock-logo">
+<img src="images/tsla.png" alt="TSLA Logo" class="stock-logo">
+<img src="images/nvda.png" alt="NVDA Logo" class="stock-logo">
+
+    <h2>Welcome Back!</h2>
+
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script>
+    function login() {
+      const email = document.getElementById("email").value;
+      if (email) {
+        localStorage.setItem("email", email);
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Please enter your email!");
+      }
+    }
+  </script>
+</body>
+</html>
